@@ -54,18 +54,18 @@ Specific scenarios showing how the system is used.
 Add to the table of contents the sections you consider necessary.
 -->
 
-- [Requirements](#-requirements)
-    - [Hardware](#-hardware)
-    - [Software](#-software)
-- [Quick Start](#-quick_start)
-- [Installation](#-installation)
-    - [Configuration](#-configuration)
-- [Quick Reference](#-quick_reference)
-- [Project Structure](#-project-structure)
-- [Troubleshooting](#-troubleshooting)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Credits](#-credits)
+- [Requirements](#requirements)
+    - [Hardware](#hardware)
+    - [Software](#software)
+- [Quick Start](#quick-start)
+- [Installation](#installation)
+    - [Configuration](#configuration)
+- [Quick Reference](#quick-reference)
+- [Project Structure](#project-structure)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
+- [Credits](#credits)
 
 ---
 ## 🧰 Requirements
@@ -148,7 +148,7 @@ This section describes how to configure the project before running it.
 - Debug or logging options
 
 > [!IMPORTANT]
-> _**Update the configuration values** according to your environment before starting the application._
+> _**Update** the configuration values according to your environment before starting the application._
 
 ---
 ## ⚡ Quick Reference
