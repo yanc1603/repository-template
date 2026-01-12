@@ -21,10 +21,20 @@ Review these examples and implement the required shields in your project reposit
 -->
 
 
-[![HTML5](https://img.shields.io/badge/HTML5-Ready-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
-[![SVG](https://img.shields.io/badge/SVG-Animated-brightgreen.svg)](https://developer.mozilla.org/en-US/docs/Web/SVG)
-[![WebSocket](https://img.shields.io/badge/WebSocket-Enabled-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
-[![Python](https://img.shields.io/badge/Python-3.7+-yellow.svg)](https://www.python.org/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717.svg?style=plastic&logo=github)](https://github.com/)
+[![HTML5](https://img.shields.io/badge/HTML5-Ready-E34F26.svg?style=plastic&logo=html5)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+[![SVG](https://img.shields.io/badge/SVG-Animated-FFB13B.svg?style=plastic&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG)
+[![WebSocket](https://img.shields.io/badge/WebSocket-Enabled-C93CD7.svg?style=plastic&logo=socket)](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
+[![Python](https://img.shields.io/badge/Python-v3.7+-3776AB.svg?style=plastic&logo=python)](https://www.python.org/)
+[![SROS2](https://img.shields.io/badge/SROS2-Humble-22314E.svg?style=plastic&logo=ros)](https://docs.ros.org/en/humble/index.html)
+[![FASTAPI](https://img.shields.io/badge/Framework-FastAPI-009688.svg?style=plastic&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![PYDANTIC](https://img.shields.io/badge/Pydantic-v2.12-E92063.svg?style=plastic&logo=pydantic)](https://docs.pydantic.dev/latest/)
+[![UBUNTU](https://img.shields.io/badge/Ubuntu-v22.04-E95420.svg?style=plastic&logo=ubuntu)](https://releases.ubuntu.com/jammy/)
+[![C++](https://img.shields.io/badge/C++-00599C.svg?style=plastic&logo=c)](link)
+[![LICENSE](https://img.shields.io/badge/License-MIT-FF0000.svg?style=plastic&logo=github)](link)
+[![JSON](https://img.shields.io/badge/JSON-000000.svg?style=plastic&logo=JSON)](https://fastapi.tiangolo.com/tutorial/encoder/#using-the-jsonable-encoder)
+
+
 
 ---
 ## 📌 Abstract
@@ -54,7 +64,7 @@ Specific scenarios showing how the system is used.
 Add to the table of contents the sections you consider necessary.
 -->
 
-- [Requirements](#requirements)
+- [Requirements](#🧰requirements)
     - [Hardware](#hardware)
     - [Software](#software)
 - [Quick Start](#quick-start)
