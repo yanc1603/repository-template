@@ -195,12 +195,12 @@ The Quick Reference section provides a concise, easy-to-scan summary of the most
 <!--
 Explanation of the folder and file organization.
 -->
-
+```bash
 ├── src/        # Application source code
 ├── config/     # Configuration files
 ├── tests/      # Test files
 ├── README.md   # Project documentation
-
+```
 
 ---
 <a id="troubleshooting"></a>
