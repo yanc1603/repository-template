@@ -64,18 +64,18 @@ Specific scenarios showing how the system is used.
 Add to the table of contents the sections you consider necessary.
 -->
 
-- [Requirements](#🧰requirements)
+- [Requirements](#-requirements)
     - [Hardware](#hardware)
     - [Software](#software)
-- [Quick Start](#quick-start)
-- [Installation](#installation)
-    - [Configuration](#configuration)
-- [Quick Reference](#quick-reference)
-- [Project Structure](#project-structure)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
-- [Credits](#credits)
+- [Quick Start](#-quick-start)
+- [Installation](#-installation)
+    - [Configuration](#-configuration)
+- [Quick Reference](#-quick-reference)
+- [Project Structure](#-project-structure)
+- [Troubleshooting](#-troubleshooting)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Credits](#-credits)
 
 ---
 ## 🧰 Requirements
