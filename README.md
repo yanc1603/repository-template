@@ -11,6 +11,16 @@ Use this template as a starting point and remove any comments, placeholder text,
 
 # Repository Name
 
+<!--The repository name defines how the project is identified and referenced within the organization and on GitHub.
+
+***A clear and consistent naming convention improves:
+***Discoverability
+***Organization
+
+Long-term maintainability
+-->
+
+
 <!--Project Shields-->
 
 <!--
@@ -64,32 +74,37 @@ Specific scenarios showing how the system is used.
 Add to the table of contents the sections you consider necessary.
 -->
 
-- [Requirements](#-requirements)
+- [Requirements](#requirements)
     - [Hardware](#hardware)
     - [Software](#software)
-- [Quick Start](#-quick-start)
-- [Installation](#-installation)
-    - [Configuration](#-configuration)
-- [Quick Reference](#-quick-reference)
-- [Project Structure](#-project-structure)
-- [Troubleshooting](#-troubleshooting)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Credits](#-credits)
+- [Quick Start](#quick-start)
+- [Installation](#installation)
+    - [Configuration](#configuration)
+- [Quick Reference](#quick-reference)
+- [Project Structure](#project-structure)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
+- [Credits](#credits)
 
 ---
+<a id="requirements"></a>
 ## 🧰 Requirements
+
 <!--
 Prerequisites needed to run or develop the project.
 -->
 
-### Hardware
+<a id="hardware"></a>
+### 🖥️ Hardware
 - Minimum hardware specifications.
 
-### Software
+<a id="software"></a>
+### 💾 Software
 - Required operating systems, runtimes, and tools.
 
 ---
+<a id="quick-start"></a>
 ## 🚀 Quick Start
 <!--
 The Quick Start section provides the minimum steps required to get the project running quickly.
@@ -109,6 +124,7 @@ STEP 4. Verify installation
 
 
 ---
+<a id="installation"></a>
 ## 📦 Installation
 <!-- 
 Steps to install the project.
@@ -139,6 +155,7 @@ Environment variables and configuration files.
 
 
 ---
+<a id="configuration"></a>
 ## ⚙️ Configuration
 <!--
 The Configuration section explains how to adjust the project’s settings so it works correctly in different environments (development, testing, production).
@@ -161,6 +178,7 @@ This section describes how to configure the project before running it.
 > _**Update** the configuration values according to your environment before starting the application._
 
 ---
+<a id="quick-reference"></a>
 ## ⚡ Quick Reference
 <!--
 The Quick Reference section provides a concise, easy-to-scan summary of the most commonly used commands, paths, and key information for the project.
@@ -172,6 +190,7 @@ The Quick Reference section provides a concise, easy-to-scan summary of the most
 
 
 ---
+<a id="project-structure"></a>
 ## 📁 Project Structure
 <!--
 Explanation of the folder and file organization.
@@ -184,6 +203,7 @@ Explanation of the folder and file organization.
 
 
 ---
+<a id="troubleshooting"></a>
 ## 🛠️ Troubleshooting
 <!--
 This section lists common issues and their possible solutions.
@@ -196,6 +216,7 @@ This section lists common issues and their possible solutions.
 **Solution:** How to resolve it
 
 ---
+<a id="contributing"></a>
 ## 👤👤👤 Contributing
 <!--
 ***CONTRIBUTION RULES***
@@ -203,11 +224,9 @@ This section lists common issues and their possible solutions.
 -Keep commits small and focused.
 -Ensure tests pass before submitting a Pull Request.
 -Update documentation if your changes affect behavior or usage
-
-***Please follow the contribution guidelines defined in this repository.
+-Please follow the contribution guidelines defined in this repository.
 -->
 
-### Contributing
 
 <!--
 This section defines the standard process for contributing to this project.
@@ -235,7 +254,8 @@ This section defines the standard process for contributing to this project.
 9. Once approved, the changes will be merged.
 
 ---
-## 🪪 License
+<a id="license"></a>
+## 📄 License
 <!--
 License information for the repository.
 -->
@@ -244,33 +264,33 @@ This section describes the license of this repository.
 
 
 ---
-## 👤 Credits
+<a id="credits"></a>
+## 🏆 Credits
 
 <!--
 This section acknowledges individuals, teams, or resources that contributed to this project.
 -->
 
-Your Name 
+- Your Name 
 
-Mail - [Email](email@example.com)
+- Mail - [Email](email@example.com)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+- Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
 
-
----
-# Basic writing and formatting syntax
+<!-- Basic writing and formatting syntax-->
 <!--
 Visit the following link https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax to enhance your README formatting using GitHub’s writing and formatting guidelines.
 -->
 
 ---
-## 🚨 Alerts
+<!-- 🚨 Alerts -->
 
 <!--
 To add an alert, use a special blockquote line specifying the alert type, followed by the alert information in a standard blockquote. Five types of alerts are available:
 -->
 
+<!--
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
 
@@ -286,3 +306,4 @@ To add an alert, use a special blockquote line specifying the alert type, follow
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
 
+-->
