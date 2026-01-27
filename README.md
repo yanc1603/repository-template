@@ -95,24 +95,23 @@ Prerequisites needed to run or develop the project.
 -->
 
 ### Python 
-#### **Virtual Environment**
 
-- **Create a virtual environment** to create a new virtual environment, use the following command:
-```bash
-   python3 -m venv name_folder
-```
+#### **Virtual Environment**
 
 - **Navigate** into the folder
 ```bash
    cd name_folder
 ```
-- **Activating Virtual Environment.** To begin working in your virtual environment, you need to activate it. Run the following command:
 
+- **Create a virtual environment** to create a new virtual environment, use the following command:
+```bash
+   python3 -m venv .venv
+```
+- **Activating Virtual Environment.** To begin working in your virtual environment, you need to activate it. Run the following command:
 ```bash
    source .venv/bin/activate
 ```
 - **Installing packages with pip** With the virtual environment activated, you can install packages using pip
-
 ```bash
    pip install -r requirements.txt
 ```
