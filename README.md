@@ -47,7 +47,7 @@ Review these examples and implement the required shields in your project reposit
 
 
 ---
-## 📌 Abstract
+## Abstract
 <!-- 
 High-level description of the project and its purpose.
 Add an image related to the repository
@@ -56,7 +56,7 @@ Add an image related to the repository
 ![Image description - Put the link in parentheses, as shown in the example](https://gist.githubusercontent.com/abhirampai/ce94b0b8345cd969d3cf997578487cdd/raw/b2dc51d4421db9d4a5a17be817e07dc8ad1e3375/hello.gif)
 
 ---   
-## 🎯 Features
+## Features
 <!--
 Add a list of the features included in the repository – Description of each specification.
 List of main functionalities.
@@ -69,7 +69,7 @@ Specific scenarios showing how the system is used.
 - ***Feature 3*** – Description
 
 ---
-## 📋 Table of Contents
+## Table of Contents
 <!--
 Add to the table of contents the sections you consider necessary.
 -->
@@ -88,24 +88,44 @@ Add to the table of contents the sections you consider necessary.
 - [Credits](#credits)
 
 ---
-<a id="requirements"></a>
-## 🧰 Requirements
+## Requirements
 
 <!--
 Prerequisites needed to run or develop the project.
 -->
 
-<a id="hardware"></a>
-### 🖥️ Hardware
+### Python 
+#### **Virtual Environment**
+
+- **Navigate** into the folder
+```bash
+   $ cd name_folder
+```
+- **Activate Virtual Environment.** To use the virtual environment, you have to activate it with this command.
+
+```bash
+   $ source .venv/bin/activate
+```
+- **Run** the script: 
+```bash
+   $ python name.py
+```
+- **Deactivate the virtual environment**
+
+```bash
+   $ deactivate
+```
+
+### Hardware
 - Minimum hardware specifications.
 
-<a id="software"></a>
-### 💾 Software
+
+### Software
 - Required operating systems, runtimes, and tools.
 
 ---
-<a id="quick-start"></a>
-## 🚀 Quick Start
+
+## Quick Start
 <!--
 The Quick Start section provides the minimum steps required to get the project running quickly.
 This section focuses only on the essential commands and actions, keeping instructions short and simple.
@@ -124,8 +144,8 @@ STEP 4. Verify installation
 
 
 ---
-<a id="installation"></a>
-## 📦 Installation
+
+## Installation
 <!-- 
 Steps to install the project.
 Configuration of development or runtime environments.
@@ -155,8 +175,8 @@ Environment variables and configuration files.
 
 
 ---
-<a id="configuration"></a>
-## ⚙️ Configuration
+
+## Configuration
 <!--
 The Configuration section explains how to adjust the project’s settings so it works correctly in different environments (development, testing, production).
 This section describes how to configure the project before running it.
@@ -178,8 +198,8 @@ This section describes how to configure the project before running it.
 > _**Update** the configuration values according to your environment before starting the application._
 
 ---
-<a id="quick-reference"></a>
-## ⚡ Quick Reference
+
+## Quick Reference
 <!--
 The Quick Reference section provides a concise, easy-to-scan summary of the most commonly used commands, paths, and key information for the project.
 -->
@@ -190,8 +210,7 @@ The Quick Reference section provides a concise, easy-to-scan summary of the most
 
 
 ---
-<a id="project-structure"></a>
-## 📁 Project Structure
+## Project Structure
 <!--
 Explanation of the folder and file organization.
 -->
@@ -203,8 +222,7 @@ Explanation of the folder and file organization.
 ```
 
 ---
-<a id="troubleshooting"></a>
-## 🛠️ Troubleshooting
+## Troubleshooting
 <!--
 This section lists common issues and their possible solutions.
 -->
@@ -216,8 +234,7 @@ This section lists common issues and their possible solutions.
 **Solution:** How to resolve it
 
 ---
-<a id="contributing"></a>
-## 👤👤👤 Contributing
+## Contributing
 <!--
 ***CONTRIBUTION RULES***
 -Follow the defined coding standards.
@@ -254,8 +271,7 @@ This section defines the standard process for contributing to this project.
 9. Once approved, the changes will be merged.
 
 ---
-<a id="license"></a>
-## 📄 License
+## License
 <!--
 License information for the repository.
 -->
@@ -264,8 +280,7 @@ This section describes the license of this repository.
 
 
 ---
-<a id="credits"></a>
-## 🏆 Credits
+## Credits
 
 <!--
 This section acknowledges individuals, teams, or resources that contributed to this project.
@@ -284,7 +299,7 @@ Visit the following link https://docs.github.com/en/get-started/writing-on-githu
 -->
 
 ---
-<!-- 🚨 Alerts -->
+<!-- Alerts -->
 
 <!--
 To add an alert, use a special blockquote line specifying the alert type, followed by the alert information in a standard blockquote. Five types of alerts are available:
