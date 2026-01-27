@@ -118,7 +118,7 @@ Prerequisites needed to run or develop the project.
 
 - **Running the Virtual Environment** Once your virtual environment is activated, you can run Python scripts that utilize the packages you've installed. 
 ```bash
-   python python_example.py
+   python3 python_example.py
 ```
 - **Deactivate the virtual environment** When you're finished working in your venv, it's important to deactivate it.
 
