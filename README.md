@@ -116,6 +116,15 @@ Prerequisites needed to run or develop the project.
    pip install -r requirements.txt
 ```
 
+- **Creating requirements.txt** To generate the `requirements.txt` file with all current dependencies, use:
+```bash
+   pip freeze > requirements.txt
+```
+
+> [!IMPORTANT]
+> **Specify Versions:** It is highly recommended to specify package versions (e.g., `pandas==1.3.3`) in your `requirements.txt` to ensure reproducibility and avoid compatibility issues.
+
+
 - **Running the Virtual Environment** Once your virtual environment is activated, you can run Python scripts that utilize the packages you've installed. 
 ```bash
    python3 python_example.py
