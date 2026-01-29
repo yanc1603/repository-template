@@ -7,7 +7,7 @@ The core goal of this template is **Modularity**.
 - **Dynamic Loading**: Use the file system to manage your features. Dropping a folder in the right place automatically registers it.
 - **Resilience**: Missing modules are skipped gracefully, they do not crash the app.
 
-## 🛠️ Quick Start
+## Quick Start
 
 This is a single-repo full-stack application. The Backend serves the Frontend.
 
@@ -25,12 +25,37 @@ This is a single-repo full-stack application. The Backend serves the Frontend.
 3. **Open Browser**:
    Visit `http://localhost:8000`.
 
-## 📂 Project Structure
+## Project Structure
 
-- **backend/**: FastAPI application with an auto-discovering router system.
-- **frontend/**: Static assets (HTML/CSS/JS) served by the backend. Features are split into ES Modules.
+```text
+repository-template/
+├── backend/
+│   ├── app/
+│   │   ├── core/
+│   │   │   ├── config.py       # Configuration loader
+│   │   │   ├── database.py     # Database connection
+│   │   │   └── modules/        # Dynamic Feature Modules
+│   │   │       ├── auth/       # Authentication Logic
+│   │   │       └── playground/ # Example Feature
+│   │   └── main.py             # App Entry & Autoloader
+│   ├── requirements.txt        # Python Dependencies
+│   ├── settings.yaml           # Env Settings
+│   └── README.md
+├── frontend/
+│   ├── css/
+│   │   └── style.css           # UI Kit & Global Styles
+│   ├── js/
+│   │   ├── api/
+│   │   │   └── client.js       # API Client (Fetch Wrapper)
+│   │   └── modules/            # Feature JS Modules
+│   │       ├── auth.js         # Auth Logic
+│   │       └── playground.js   # Playground Logic
+│   ├── index.html              # SPA Entry & Dynamic Loader
+│   └── README.md
+└── README.md                   # This file
+```
 
-## ✨ Features
+## Features
 
 - **Authentication**: Secure session-based login/register (JSON API).
 - **Dynamic Modularity**: 
