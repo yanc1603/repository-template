@@ -13,7 +13,7 @@ export function initApiTester() {
             try {
                 // Test the /me endpoint as an example, or a public one if auth is issue
                 // We'll try a public endpoint effectively or the auth status
-                const res = await api.get('/auth/me'); // Assuming auth router is mounted at /auth or root?
+                const res = await api.get('/me');
                 // Actually based on router.py it's at /me if mounted at root, or /auth/me if prefixed.
                 // Dynamic loader does: app.include_router(module.router) without prefix usually unless specified in router.
                 // Let's check router.py again? No, let's just assume /me for now or check mounts.
