@@ -1,25 +1,39 @@
-# Modular Development Template
+# Modular Full-Stack Template
 
-A scalable and modular template for full-stack applications using **FastAPI** (Backend) and **Vanilla JS Modules** (Frontend).
+A resilient, "Plug-and-Play" template for rapid development using **FastAPI** (Backend) and **Vanilla JS Modules** (Frontend).
 
-## Structure
+The core goal of this template is **Modularity**. 
+- **Decoupled Features**: You can add or remove feature folders without breaking the application.
+- **Dynamic Loading**: Use the file system to manage your features. Dropping a folder in the right place automatically registers it.
+- **Resilience**: Missing modules are skipped gracefully, they do not crash the app.
 
-- **backend/**: FastAPI application structured by modules.
-- **frontend/**: SPA-like frontend using ES6 modules.
+## 🛠️ Quick Start
 
-## Getting Started
+This is a single-repo full-stack application. The Backend serves the Frontend.
 
-1. **Backend**:
+1. **Setup Backend**:
    ```bash
    cd backend
    pip install -r requirements.txt
+   ```
+
+2. **Run Application**:
+   ```bash
    uvicorn app.main:app --reload
    ```
-2. **Frontend**:
-   The backend serves the frontend at `http://localhost:8000`.
 
-## Features
+3. **Open Browser**:
+   Visit `http://localhost:8000`.
 
-- **Modular Design**: Code organized by feature modules.
-- **Authentication**: Secure Session-based Auth with bcrypt hashing.
-- **Interactive Playground**: Demo module showcasing CRUD operations.
+## 📂 Project Structure
+
+- **backend/**: FastAPI application with an auto-discovering router system.
+- **frontend/**: Static assets (HTML/CSS/JS) served by the backend. Features are split into ES Modules.
+
+## ✨ Features
+
+- **Authentication**: Secure session-based login/register (JSON API).
+- **Dynamic Modularity**: 
+    - **Backend**: Auto-loads routers from `app/core/modules/`.
+    - **Frontend**: Helper to safely load JS modules.
+- **UI Kit**: Built-in CSS system for Cards, Buttons, and Deep Interactions.
