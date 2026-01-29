@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modular Dashboard</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .module {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+        }
+
+        input {
+            padding: 8px;
+            width: 60%;
+        }
+
+        button {
+            padding: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modular Development Template</h1>
+
+    <div class="module" id="playground-module">
+        <h2>Playground (Common Functionalities)</h2>
+
+        <div style="margin-bottom: 15px;">
+            <input type="text" id="input-title" placeholder="Enter Task Name...">
+            <button id="btn-add">Add Task</button>
+        </div>
+
+        <h3>Database State:</h3>
+        <ul id="task-list" style="list-style: none; padding: 0;"></ul>
+    </div>
+
+    <script type="module">
+        import { initPlayground } from './js/modules/playground.js';
+        initPlayground();
+    </script>
+</body>
+
+</html>
