@@ -29,6 +29,10 @@ app.add_middleware(SessionMiddleware, secret_key=secret_key)
 # Initialize Database
 @app.on_event("startup")
 async def init_db():
+    """
+    Startup event handler to initialize the database.
+    Creates all tables compatible with the SQLAlchemy models.
+    """
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
 
@@ -37,6 +41,9 @@ def include_dynamic_routers(app: FastAPI):
     """
     Scans app/core/modules for subdirectories.
     If a subdirectory contains router.py, imports it and includes the 'router' object.
+    
+    Args:
+        app (FastAPI): The main FastAPI application instance.
     """
     modules_dir = os.path.join(os.path.dirname(__file__), "core", "modules")
     
@@ -72,6 +79,7 @@ include_dynamic_routers(app)
 # -----------------------------
 
 # Mount static files
+# Serves the frontend application from the 'frontend' directory at the root URL.
 frontend_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../frontend'))
 if os.path.exists(frontend_path):
     app.mount("/", StaticFiles(directory=frontend_path, html=True), name="static")

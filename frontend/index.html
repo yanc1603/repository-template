@@ -103,13 +103,13 @@
             try {
                 const module = await import(path);
                 if (module && typeof module[initFunctionName] === 'function') {
-                    console.log(`✅ Loaded module: ${path}`);
+                    console.log(`Loaded module: ${path}`);
                     module[initFunctionName]();
                 } else {
-                    console.warn(`⚠️ Module loaded but function '${initFunctionName}' missing: ${path}`);
+                    console.warn(`Module loaded but function '${initFunctionName}' missing: ${path}`);
                 }
             } catch (err) {
-                console.warn(`ℹ️ Optional module not found or failed to load: ${path}`);
+                console.warn(`ℹOptional module not found or failed to load: ${path}`);
                 console.debug(err);
             }
         }
