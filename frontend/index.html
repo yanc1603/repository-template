@@ -58,6 +58,22 @@
             <ul id="task-list" style="list-style: none; padding: 0;"></ul>
         </div>
 
+        <!-- API TESTER MODULE -->
+        <div class="module" id="api-tester-module">
+            <div class="card-header">
+                <h2>API Tester</h2>
+            </div>
+            <div style="padding: 20px;">
+                <p>Test API connectivity and endpoints.</p>
+                <button id="btn-test-api" class="btn btn-outline">Test '/me' Endpoint</button>
+                <pre id="api-output"
+                    style="background: #f4f4f4; padding: 10px; margin-top: 10px; border-radius: 5px; min-height: 50px;">Waiting for input...</pre>
+                <div style="margin-top: 20px;">
+                    <a href="/docs" target="_blank" class="btn btn-primary">Open Swagger UI</a>
+                </div>
+            </div>
+        </div>
+
         <!-- UI SHOWCASE MODULE (Static) -->
         <div class="module">
             <div class="card-header">
@@ -117,6 +133,7 @@
         // Initialize Core Modules (Auth is typically required for full app flow, but can be optional too)
         loadModule('./js/modules/auth.js', 'initAuth');
         loadModule('./js/modules/playground.js', 'initPlayground');
+        loadModule('./js/modules/api_tester.js', 'initApiTester');
 
         // You can add more modules here easily!
         // loadModule('./js/modules/new-feature.js', 'initNewFeature');

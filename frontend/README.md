@@ -2,12 +2,12 @@
 
 The frontend is a Single Page Application (SPA) structure built with **Vanilla JS Modules** and a custom **CSS UI Kit**.
 
-## 🏃 Running the Frontend
+## Running the Frontend
 The frontend is served statically by the Backend.
 - Run the backend: `uvicorn app.main:app`
 - Visit: `http://localhost:8000`
 
-## 🧩 Modularity & Event Architecture
+## Modularity & Event Architecture
 
 Modules are loosely coupled using an **Event-Driven Architecture**.
 
@@ -29,7 +29,7 @@ Modules communicate via `window` events, not direct calls.
    loadModule('./js/modules/my_feature.js', 'initMyFeature');
    ```
 
-## 🎨 UI Kit
+## UI Kit
 
 A robust CSS system is included in `css/style.css`.
 

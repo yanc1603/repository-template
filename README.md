@@ -52,6 +52,8 @@ repository-template/
 │   │       └── playground.js   # Playground Logic
 │   ├── index.html              # SPA Entry & Dynamic Loader
 │   └── README.md
+├── readme/
+│   └── README.md               # Readme template
 └── README.md                   # This file
 ```
 
