@@ -5,14 +5,13 @@ const api = new ApiClient();
 export async function initAuth() {
     console.log("Initializing Auth Module...");
 
+    // Auth Module Elements (Self-contained)
     const loginModule = document.getElementById('login-module');
-    const playgroundModule = document.getElementById('playground-module');
 
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
     const loginMessage = document.getElementById('login-message');
     const registerMessage = document.getElementById('register-message');
-    const btnLogout = document.getElementById('btn-logout');
 
     // Helper: Show Message
     function showMessage(element, message, isError = true) {
@@ -21,22 +20,24 @@ export async function initAuth() {
         setTimeout(() => element.textContent = '', 3000);
     }
 
-    // Helper: Toggle Views
-    function setAuthenticated(isAuthenticated) {
-        if (isAuthenticated) {
-            loginModule.style.display = 'none';
-            playgroundModule.style.display = 'block';
-        } else {
-            loginModule.style.display = 'block';
-            playgroundModule.style.display = 'none';
+    // Broadcast Auth State
+    function setAuthenticated(isAuthenticated, user = null) {
+        // 1. Update own UI (Login Form)
+        if (loginModule) {
+            if (isAuthenticated) loginModule.classList.add('hidden');
+            else loginModule.classList.remove('hidden');
         }
+
+        // 2. Dispatch Event for other modules
+        window.dispatchEvent(new CustomEvent('app:auth-change', {
+            detail: { authenticated: isAuthenticated, user: user }
+        }));
     }
 
     // 1. Check Session on Load
     try {
         const res = await api.get('/me');
-        console.log("Session Check:", res);
-        setAuthenticated(res && res.authenticated);
+        setAuthenticated(res && res.authenticated, res.user);
     } catch (e) {
         console.error("Auth check failed", e);
         setAuthenticated(false);
@@ -52,7 +53,7 @@ export async function initAuth() {
             const res = await api.post('/login', data);
             if (res && res.success) {
                 showMessage(loginMessage, "Login Successful!", false);
-                setAuthenticated(true);
+                setAuthenticated(true, res.user);
                 e.target.reset();
             } else {
                 showMessage(loginMessage, (res && res.detail) || "Login failed");
@@ -68,7 +69,7 @@ export async function initAuth() {
             const data = Object.fromEntries(formData.entries());
 
             const res = await api.post('/register', data);
-            if (res && res.username) { // User schema returned
+            if (res && res.username) {
                 showMessage(registerMessage, "Registered! Please login.", false);
                 e.target.reset();
             } else {
@@ -78,10 +79,11 @@ export async function initAuth() {
     }
 
     // 4. Handle Logout
-    if (btnLogout) {
-        btnLogout.addEventListener('click', async () => {
+    // We listen to body delegation or specific button if it exists
+    document.addEventListener('click', async (e) => {
+        if (e.target && e.target.id === 'btn-logout') {
             await api.post('/logout');
             setAuthenticated(false);
-        });
-    }
+        }
+    });
 }
