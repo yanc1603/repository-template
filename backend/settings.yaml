@@ -1,0 +1,11 @@
+app:
+  tittle: "Modular Template API"
+  debug: true
+
+database:
+  url: "sqlite+aiosqlite:///./app.db"
+
+security:
+  secret_key: "REPLACE_THIS_SECRET_KEY"
+  algorithm: "HS256"
+  access_token_expire_minutes: 30
