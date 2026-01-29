@@ -1,9 +1,9 @@
-from fastapi impor APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemt import select
+from sqlalchemy import select
 from app.core.database import get_db
 from pydantic import BaseModel
-from.models import Task
+from .models import Task
 
 
 router = APIRouter(prefix="/playground", tags=["Playground"])
@@ -18,7 +18,7 @@ class TaskResponse(BaseModel):
 
 # Send Data (CREATE)
 @router.post("/", response_model=TaskResponse)
-async def create_task(task: TaskCreate, db: ASyncSession = Depends(get_db)):
+async def create_task(task: TaskCreate, db: AsyncSession = Depends(get_db)):
     new_task = Task(title=task.title)
     db.add(new_task)
     await db.commit()
@@ -33,8 +33,8 @@ async def read_tasks(db: AsyncSession = Depends(get_db)):
 
 # Change State (UPDATE)
 @router.patch("/", response_model=TaskResponse)
-async def toggle_state(taks_id: int, db: AsyncSession = Depends(get_db)):
-    result = await db.execute(select(Task).where(Task.id == taks_id))
+async def toggle_state(task_id: int, db: AsyncSession = Depends(get_db)):
+    result = await db.execute(select(Task).where(Task.id == task_id))
     task = result.scalar_one_or_none()
     if not task: raise HTTPException(404)
 

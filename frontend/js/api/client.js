@@ -10,7 +10,7 @@ export class ApiClient {
         const token = localStorage.getItem('access_token');
         if (token) headers['Authorization'] = `Bearer ${token}`;
 
-        const options = { method, headers };
+        const options = { method, headers, credentials: 'include' };
         if (body) options.body = JSON.stringify(body);
 
         try {

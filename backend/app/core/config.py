@@ -1,19 +1,24 @@
 import yaml
 from pathlib import Path
-from pydantic_settings import BaseSettings, PydanticBaseSettingsSource
+from pydantic_settings import BaseSettings
 
-
-PROJECT_DIR = Path(__file__).parent.parent
+# Points to 'backend' directory
+# core -> app -> backend
+PROJECT_DIR = Path(__file__).resolve().parent.parent.parent
 
 class Settings(BaseSettings):
     app: dict
     database: dict
     security: dict
 
-    @classmethod
-    def settings_customize_sources(cls, settings_cls, init_settings, env_settings, dotenv_settings, file_secret_settings):
-        def yaml_config_settings_source(settings: BaseSettings) -> dict:
-            return yaml.safe_load(open(PROJECT_DIR / "settings.yaml"))
-        return (init_settings, env_settings, yaml_config_settings_source)
+def load_settings() -> Settings:
+    config_path = PROJECT_DIR / "settings.yaml"
+    if not config_path.exists():
+        raise FileNotFoundError(f"Config file not found at {config_path}")
+    
+    with open(config_path) as f:
+        config_data = yaml.safe_load(f) or {}
+    
+    return Settings(**config_data)
 
-settings = Settings()
+settings = load_settings()
