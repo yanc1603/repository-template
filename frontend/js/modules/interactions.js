@@ -23,14 +23,16 @@ export function initInteractions() {
     // --- API Call Helper ---
     const sendInteraction = async (type, value = null, extra = {}) => {
         const payload = { type, value, extra };
-        log(`Sending ${type}...`);
+        // Show what is being sent (restore functionality)
+        log(`Sending: ${JSON.stringify(payload)}`);
         try {
             const res = await api.post('/interactions/echo', payload);
             if (res) {
                 log(JSON.stringify(res, null, 2), true);
             }
         } catch (err) {
-            log(`Error: ${err.message}`);
+            // Different error message for mistakes
+            log(`⚠️ Oops! Interaction Failed: ${err.message}`);
         }
     };
 
